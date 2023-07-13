@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('My_blog.urls')),
     path('register/', user_view.register, name="register"),
+    path('profile/', user_view.profile, name="profile"),
     path('login/', auth_view.LoginView.as_view
          (template_name='users/login.html'), name="login"),
     path('logout/', auth_view.LogoutView.as_view
